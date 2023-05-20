@@ -55,7 +55,7 @@ function init() {
 
         const svg = new SVG();
         svg.setText(text, textColor);
-        svg.setShape(shape);
+        svg.setShape(svgShape);
         return writeFile("logo.svg", svg.render());
       })
       .then(() => {
@@ -65,3 +65,4 @@ function init() {
         console.log(error);
       });
   }
+  init();
