@@ -51,4 +51,11 @@ function init() {
             svgShape = new Triangle();
             break;
         }
+        svgShape.setColor(shapeColor);
+
+        const svg = new SVG();
+        svg.setText(text, textColor);
+        svg.setShape(shape);
+        return writeFile("logo.svg", svg.render());
+      })
 }
