@@ -37,4 +37,18 @@ function init() {
         let textColor = response.textColor;
         let shape = response.shapeType;
         let shapeColor =  response.shapeColor;
+        let svgShape;
+        switch (shape) {
+          case "circle":
+            svgShape = new Circle();
+            break;
+
+          case "square":
+            svgShape = new Square();
+            break;
+
+          default:
+            svgShape = new Triangle();
+            break;
+        }
 }
