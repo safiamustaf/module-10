@@ -58,4 +58,10 @@ function init() {
         svg.setShape(shape);
         return writeFile("logo.svg", svg.render());
       })
-}
+      .then(() => {
+        console.log("logo  created");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
