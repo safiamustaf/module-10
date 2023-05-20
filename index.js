@@ -32,4 +32,9 @@ function init() {
           message: "Provide a shape color",
         },
       ])
+      .then((response) => {
+        let text = response.text;
+        let textColor = response.textColor;
+        let shape = response.shapeType;
+        let shapeColor =  response.shapeColor;
 }
